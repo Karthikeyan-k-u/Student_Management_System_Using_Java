@@ -1,48 +1,45 @@
 import java.util.*;
-
-class book {
+class student  {
     String name;
-    String author;
-    String type;
-    String price;
-    String buy;
+    String department ;
+    String year;
+    String acadamicyear;
 
-    book(String name, String author, String type, String price, String buy) {
-        this.name = name;
-        this.author = author;
-        this.type = type;
-        this.price = price;
-        this.buy = buy;
+    student(String name,String department,String year,String acadamicyear) {
+     this.name= name;
+     this.department=department;
+     this.year=year;
+     this.acadamicyear=acadamicyear;
+}
+    
+    void studentdetails(){
+        System.out.println("Name : "+name);
+        System.out.println("Department  : "+department);
     }
-
-    void details() {
-        System.out.println("Book Name   : " + name);
-        System.out.println("Author Name : " + author);
-        System.out.println("Book Type   : " + type);
-        System.out.println("Book Price  : " + price);
-        System.out.println("Book Status : " + buy);
-        System.out.println("..................................");
+    void yeardetails(){
+        System.out.println("Year : "+year);
+        System.out.println("Acadamic Year  :  "+acadamicyear);
+        System.out.println("                  ");
     }
 }
-
-public class project_2_library_management_system {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number of books:");
-        int n = sc.nextInt();
-        sc.nextLine();
-        System.out.println("Enter the book details in the format: name,author,type,price,buy/return");
-        book[] books = new book[n];
-        for (int i = 0; i < n; i++) {
-            String bk = sc.nextLine();
-            String[] bookinfo = bk.split(",");
-            books[i] = new book(bookinfo[0],bookinfo[1],bookinfo[2],bookinfo[3],bookinfo[4]);
-        }
-        for (int i = 0; i < n; i++) {
-            System.out.println("Book code = " + ("10025"+(i + 1)) + "\n Details:");
-            books[i].details();
+public class project_1_student_management_system{
+    public static void main (String [] args){
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Enter the number of students:");
+         int n = sc.nextInt();
+         sc.nextLine();
+         System.out.println("Student details: name,department,year,acadamic year");
+        
+        for(int i=0 ;i<n;i++)
+        {
+             String clg = sc.nextLine();
+         String[] college = clg.split(",");
+         student details = new student(college[0],college[1],college[2],college[3]);
+        System.out.println("Enter the student ID: 411625000"+(i+1));
+       
+        details.studentdetails();
+        details.yeardetails();
         }
         sc.close();
-    }
+          }
 }
-
