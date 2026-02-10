@@ -1,5 +1,5 @@
 # Student_Management_System_Using_Java
-              **Description**
+              
 This program uses a class and constructor to store student details such as name, department, year, and academic year. It uses objects to create student records, methods to display student information, and a loop to handle multiple students. The Scanner class is used for user input, and string splitting is used to read comma-separated data. It demonstrates constructors, method calling, arrays, loops, and basic input/output in Java.
 
 **Algorithm**
